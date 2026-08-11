@@ -12,7 +12,8 @@ const __dirname = path.dirname(__filename);
 export default defineConfig({
   plugins: [react(), tailwindcss(), viteSingleFile()],
   server: {
-    port: 5500,
+    host: "127.0.0.1",
+    port: 5501,
   },
   resolve: {
     alias: {
