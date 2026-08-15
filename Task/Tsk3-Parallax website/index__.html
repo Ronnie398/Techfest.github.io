@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forma — A creative studio crafting meaningful experiences through design, strategy, and technology.">
+    <title>Forma — Creative Studio</title>
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+    
+    <!-- Header / Navigation -->
+    <header class="header" role="banner">
+        <div class="header__inner">
+            <a href="#" class="logo" aria-label="Forma — Home">
+                <span class="logo__text">Forma</span>
+            </a>
+            
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li><a href="#about" class="nav__link">About</a></li>
+                    <li><a href="#process" class="nav__link">Process</a></li>
+                    <li><a href="#work" class="nav__link">Work</a></li>
+                    <li><a href="#impact" class="nav__link">Impact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header__actions">
+                <button class="theme-toggle" aria-label="Toggle dark mode">
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                
+                <button class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="mobile-menu-toggle__bar"></span>
+                    <span class="mobile-menu-toggle__bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li><a href="#about" class="mobile-menu__link">About</a></li>
+                <li><a href="#process" class="mobile-menu__link">Process</a></li>
+                <li><a href="#work" class="mobile-menu__link">Work</a></li>
+                <li><a href="#impact" class="mobile-menu__link">Impact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile-menu-backdrop" aria-hidden="true"></div>
+    
+    <!-- Main Content -->
+    <main id="main">
+        
+        <!-- ============================================
+             HERO SECTION
+             Full viewport intro with layered parallax
+             ============================================ -->
+        <section class="hero" aria-label="Introduction">
+            <!-- Parallax Layers -->
+            <div class="hero__layers" data-mouse-parallax>
+                <!-- Far Background - slowest -->
+                <div class="hero__layer hero__layer--far" data-parallax="0.2">
+                    <div class="hero__shape hero__shape--circle-large"></div>
+                    <div class="hero__shape hero__shape--arc" data-parallax="0.15"></div>
+                </div>
+                
+                <!-- Midground -->
+                <div class="hero__layer hero__layer--mid" data-parallax="0.5">
+                    <div class="hero__shape hero__shape--circle-small"></div>
+                    <div class="hero__shape hero__shape--line"></div>
+                </div>
+                
+                <!-- Foreground - fastest -->
+                <div class="hero__layer hero__layer--fore" data-parallax="0.8">
+                    <div class="hero__shape hero__shape--dot-pattern"></div>
+                </div>
+            </div>
+            
+            <!-- Hero Content -->
+            <div class="hero__content">
+                <span class="hero__label reveal-item">Creative Studio</span>
+                <h1 class="hero__title reveal-item">
+                    <span class="hero__title-line">We craft</span>
+                    <span class="hero__title-line hero__title-line--accent">experiences</span>
+                    <span class="hero__title-line">that matter</span>
+                </h1>
+                <p class="hero__description reveal-item">
+                    Forma is a design studio based in Copenhagen. We partner with ambitious brands to create digital products, visual identities, and spatial experiences that stand apart.
+                </p>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" aria-hidden="true">
+                <span class="scroll-indicator__text">Scroll to explore</span>
+                <div class="scroll-indicator__icon">
+                    <svg viewBox="0 0 24 40" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="1" width="22" height="38" rx="11" />
+                        <line x1="12" y1="8" x2="12" y2="16" class="scroll-indicator__wheel"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================
+             ABOUT SECTION
+             Staggered reveal with depth layers
+             ============================================ -->
+        <section class="about" id="about" aria-labelledby="about-title">
+            <div class="about__layers">
+                <div class="about__layer" data-parallax="0.3">
+                    <div class="about__shape about__shape--bg-circle"></div>
+                </div>
+            </div>
+            
+            <div class="about__inner container">
+                <div class="about__content">
+                    <span class="section-label reveal-item">About the Studio</span>
+                    <h2 class="section-title reveal-item" id="about-title">
+                        Design is how we think,<br>not just how it looks
+                    </h2>
+                    
+                    <div class="about__grid">
+                        <div class="about__text-block reveal-item">
+                            <p class="about__text">
+                                Founded in 2017, we built Forma on a simple belief: that the best design emerges from genuine understanding. We don't rush to concepts—we spend time with problems, unraveling complexity until clarity appears.
+                            </p>
+                        </div>
+                        <div class="about__text-block reveal-item">
+                            <p class="about__text">
+                                Our team of twelve spans designers, strategists, and developers. We're small enough to stay nimble, experienced enough to know what works. Every project gets our full attention, not just our latest template.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="about__image-wrapper reveal-item">
+                        <img 
+                            src="https://picsum.photos/seed/forma-studio/1200/800" 
+                            alt="Forma studio workspace with natural light, wooden desks, and design materials"
+                            class="about__image"
+                            loading="lazy"
+                            width="1200"
+                            height="800"
+                        >
+                        <div class="about__image-accent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================
+             PROCESS SECTION
+             Alternating parallax compositions
+             ============================================ -->
+        <section class="process" id="process" aria-labelledby="process-title">
+            <div class="process__inner container">
+                <header class="process__header">
+                    <span class="section-label reveal-item">Our Approach</span>
+                    <h2 class="section-title reveal-item" id="process-title">
+                        A process built on conversation
+                    </h2>
+                </header>
+                
+                <div class="process__grid">
+                    <!-- Step 1 -->
+                    <article class="process__item process__item--left reveal-item">
+                        <div class="process__item-visual" data-parallax="0.4">
+                            <div class="process__shape process__shape--1">
+                                <svg viewBox="0 0 300 300" fill="none">
+                                    <circle cx="150" cy="150" r="120" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                    <circle cx="150" cy="150" r="80" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                    <circle cx="150" cy="150" r="40" fill="currentColor" opacity="0.1"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="process__item-content">
+                            <span class="process__item-number">01</span>
+                            <h3 class="process__item-title">Listen & Learn</h3>
+                            <p class="process__item-text">
+                                We start every engagement by listening—really listening. To your team, your customers, your competitors. Understanding the landscape before drawing a single wireframe.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <!-- Step 2 -->
+                    <article class="process__item process__item--right reveal-item">
+                        <div class="process__item-content">
+                            <span class="process__item-number">02</span>
+                            <h3 class="process__item-title">Define & Refine</h3>
+                            <p class="process__item-text">
+                                Insights become direction. We distill findings into clear problems to solve, measurable goals to hit, and design principles that will guide every decision.
+                            </p>
+                        </div>
+                        <div class="process__item-visual" data-parallax="0.4">
+                            <div class="process__shape process__shape--2">
+                                <svg viewBox="0 0 300 300" fill="none">
+                                    <rect x="60" y="60" width="180" height="180" stroke="currentColor" stroke-width="1" opacity="0.3" transform="rotate(15 150 150)"/>
+                                    <rect x="90" y="90" width="120" height="120" stroke="currentColor" stroke-width="1" opacity="0.5" transform="rotate(30 150 150)"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Step 3 -->
+                    <article class="process__item process__item--left reveal-item">
+                        <div class="process__item-visual" data-parallax="0.4">
+                            <div class="process__shape process__shape--3">
+                                <svg viewBox="0 0 300 300" fill="none">
+                                    <path d="M150 50 L250 200 L50 200 Z" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                                    <path d="M150 80 L220 190 L80 190 Z" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+                                    <circle cx="150" cy="160" r="20" fill="currentColor" opacity="0.1"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="process__item-content">
+                            <span class="process__item-number">03</span>
+                            <h3 class="process__item-title">Create & Iterate</h3>
+                            <p class="process__item-text">
+                                Ideas take shape through sketches, prototypes, and tests. We iterate quickly, incorporating feedback early when change is cheap and learning is fresh.
+                            </p>
+                        </div>
+                    </article>
+                    
+                    <!-- Step 4 -->
+                    <article class="process__item process__item--right reveal-item">
+                        <div class="process__item-content">
+                            <span class="process__item-number">04</span>
+                            <h3 class="process__item-title">Launch & Evolve</h3>
+                            <p class="process__item-text">
+                                Great work doesn't end at launch. We monitor, measure, and refine—ensuring your investment continues to deliver value long after the unveiling.
+                            </p>
+                        </div>
+                        <div class="process__item-visual" data-parallax="0.4">
+                            <div class="process__shape process__shape--4">
+                                <svg viewBox="0 0 300 300" fill="none">
+                                    <circle cx="150" cy="150" r="100" stroke="currentColor" stroke-width="1" opacity="0.3" stroke-dasharray="8 8"/>
+                                    <circle cx="150" cy="150" r="60" stroke="currentColor" stroke-width="1" opacity="0.5" stroke-dasharray="4 4"/>
+                                    <circle cx="150" cy="150" r="20" fill="currentColor" opacity="0.2"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================
+             WORK / SHOWCASE SECTION
+             Floating cards with parallax
+             ============================================ -->
+        <section class="work" id="work" aria-labelledby="work-title">
+            <div class="work__inner container">
+                <header class="work__header">
+                    <span class="section-label reveal-item">Selected Work</span>
+                    <h2 class="section-title reveal-item" id="work-title">
+                        Projects that push boundaries
+                    </h2>
+                </header>
+                
+                <div class="work__grid">
+                    <!-- Card 1 -->
+                    <article class="work__card reveal-item" data-parallax-card="0.2">
+                        <div class="work__card-image">
+                            <img 
+                                src="https://picsum.photos/seed/aurora-brand/800/600" 
+                                alt="Aurora brand identity project showing geometric logo on warm paper"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                        </div>
+                        <div class="work__card-content">
+                            <span class="work__card-category">Brand Identity</span>
+                            <h3 class="work__card-title">Aurora</h3>
+                            <p class="work__card-text">Complete visual identity for a sustainable architecture firm. Rooted in natural materials and timeless form.</p>
+                        </div>
+                        <div class="work__card-accent"></div>
+                    </article>
+                    
+                    <!-- Card 2 -->
+                    <article class="work__card reveal-item" data-parallax-card="0.3">
+                        <div class="work__card-image">
+                            <img 
+                                src="https://picsum.photos/seed/meridian-app/800/600" 
+                                alt="Meridian app interface showing clean dashboard design"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                        </div>
+                        <div class="work__card-content">
+                            <span class="work__card-category">Digital Product</span>
+                            <h3 class="work__card-title">Meridian</h3>
+                            <p class="work__card-text">A financial planning application that makes complex wealth management feel approachable and human.</p>
+                        </div>
+                        <div class="work__card-accent"></div>
+                    </article>
+                    
+                    <!-- Card 3 -->
+                    <article class="work__card reveal-item" data-parallax-card="0.25">
+                        <div class="work__card-image">
+                            <img 
+                                src="https://picsum.photos/seed/folio-magazine/800/600" 
+                                alt="Folio magazine editorial design with bold typography"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                        </div>
+                        <div class="work__card-content">
+                            <span class="work__card-category">Editorial</span>
+                            <h3 class="work__card-title">Folio</h3>
+                            <p class="work__card-text">Art direction and layout design for a quarterly cultural magazine celebrating Nordic design heritage.</p>
+                        </div>
+                        <div class="work__card-accent"></div>
+                    </article>
+                    
+                    <!-- Card 4 -->
+                    <article class="work__card reveal-item" data-parallax-card="0.35">
+                        <div class="work__card-image">
+                            <img 
+                                src="https://picsum.photos/seed/norden-space/800/600" 
+                                alt="Norden co-working space interior with warm lighting"
+                                loading="lazy"
+                                width="800"
+                                height="600"
+                            >
+                        </div>
+                        <div class="work__card-content">
+                            <span class="work__card-category">Spatial Design</span>
+                            <h3 class="work__card-title">Norden</h3>
+                            <p class="work__card-text">Environmental graphics and wayfinding for a co-working chain expanding across Scandinavian cities.</p>
+                        </div>
+                        <div class="work__card-accent"></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================
+             IMPACT / STATS SECTION
+             Animated counters with motion accents
+             ============================================ -->
+        <section class="impact" id="impact" aria-labelledby="impact-title">
+            <div class="impact__layers">
+                <div class="impact__layer" data-parallax="0.25">
+                    <div class="impact__shape impact__shape--1"></div>
+                </div>
+                <div class="impact__layer" data-parallax="0.4">
+                    <div class="impact__shape impact__shape--2"></div>
+                </div>
+            </div>
+            
+            <div class="impact__inner container">
+                <header class="impact__header">
+                    <span class="section-label reveal-item">By the Numbers</span>
+                    <h2 class="section-title reveal-item" id="impact-title">
+                        Measuring what matters
+                    </h2>
+                </header>
+                
+                <div class="impact__grid">
+                    <div class="impact__stat reveal-item">
+                        <span class="impact__stat-number" data-counter="47">0</span>
+                        <span class="impact__stat-suffix">+</span>
+                        <span class="impact__stat-label">Projects delivered</span>
+                        <p class="impact__stat-note">Since 2017, across four continents</p>
+                    </div>
+                    
+                    <div class="impact__stat reveal-item">
+                        <span class="impact__stat-number" data-counter="12">0</span>
+                        <span class="impact__stat-suffix">people</span>
+                        <span class="impact__stat-label">Small team, big ideas</span>
+                        <p class="impact__stat-note">Specialists in design, strategy, code</p>
+                    </div>
+                    
+                    <div class="impact__stat reveal-item">
+                        <span class="impact__stat-number" data-counter="8">0</span>
+                        <span class="impact__stat-suffix">years</span>
+                        <span class="impact__stat-label">In the industry</span>
+                        <p class="impact__stat-note">Learning and growing with each project</p>
+                    </div>
+                    
+                    <div class="impact__stat reveal-item">
+                        <span class="impact__stat-number" data-counter="96">0</span>
+                        <span class="impact__stat-suffix">%</span>
+                        <span class="impact__stat-label">Client retention</span>
+                        <p class="impact__stat-note">Relationships built on results</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ============================================
+             CONTACT / CTA SECTION
+             Final parallax finish
+             ============================================ -->
+        <section class="contact" aria-labelledby="contact-title">
+            <div class="contact__layers">
+                <div class="contact__layer contact__layer--far" data-parallax="0.2">
+                    <div class="contact__shape contact__shape--circle-1"></div>
+                </div>
+                <div class="contact__layer contact__layer--mid" data-parallax="0.45">
+                    <div class="contact__shape contact__shape--circle-2"></div>
+                </div>
+                <div class="contact__layer contact__layer--fore" data-parallax="0.7">
+                    <div class="contact__shape contact__shape--lines"></div>
+                </div>
+            </div>
+            
+            <div class="contact__inner container">
+                <div class="contact__content">
+                    <span class="section-label reveal-item">Let's Connect</span>
+                    <h2 class="section-title contact__title reveal-item" id="contact-title">
+                        Ready to create<br>something together?
+                    </h2>
+                    <p class="contact__text reveal-item">
+                        Whether you have a project in mind or just want to explore possibilities, we'd love to hear from you. Coffee's on us if you're in Copenhagen.
+                    </p>
+                    
+                    <div class="contact__actions reveal-item">
+                        <a href="mailto:hello@forma.studio" class="btn btn--primary">
+                            Start a conversation
+                            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <div class="contact__links reveal-item">
+                        <a href="#" class="contact__link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                                <circle cx="12" cy="12" r="4"/>
+                                <circle cx="18" cy="6" r="1" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="contact__link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="2"/>
+                                <path d="M8 11v5M8 8v.01M12 16v-5a2 2 0 014 0v5"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="contact__link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__inner container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <span class="footer__logo">Forma</span>
+                    <p class="footer__tagline">Crafting experiences that resonate.</p>
+                </div>
+                <nav class="footer__nav" aria-label="Footer navigation">
+                    <div class="footer__nav-group">
+                        <h4 class="footer__nav-title">Studio</h4>
+                        <ul class="footer__nav-list">
+                            <li><a href="#about" class="footer__nav-link">About</a></li>
+                            <li><a href="#process" class="footer__nav-link">Process</a></li>
+                            <li><a href="#work" class="footer__nav-link">Work</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__nav-group">
+                        <h4 class="footer__nav-title">Contact</h4>
+                        <ul class="footer__nav-list">
+                            <li><a href="mailto:hello@forma.studio" class="footer__nav-link">hello@forma.studio</a></li>
+                            <li><a href="tel:+4512345678" class="footer__nav-link">+45 12 34 56 78</a></li>
+                            <li><span class="footer__nav-text">Copenhagen, Denmark</span></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2026 Forma Studio. All rights reserved.</p>
+                <div class="footer__legal">
+                    <a href="#" class="footer__legal-link">Privacy Policy</a>
+                    <a href="#" class="footer__legal-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
